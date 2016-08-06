@@ -8,7 +8,7 @@ $timeout=10;
 curl_setopt($cu_1,CURLOPT_URL,$login_url);
 curl_setopt($cu_1,CURLOPT_RETURNTRANSFER,1);
 curl_setopt($cu_1,CURLOPT_CONNECTTIMEOUT,$timeout);
-curl_setopt($cu_1,CURLOPT_COOKIEJAR,$cookie_file);
+curl_setopt($cu_1,CURLOPT_COOKIEJAR,$cookie_file); //保存cookie文件
 ob_start();
 $contents = curl_exec($cu_1);
 curl_close($cu_1);
